@@ -8,9 +8,10 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <div className="App-header">
-                <h1>Header for 275 wedsite</h1>
-            </div>
+            <h1>Header for 275 wedsite</h1>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
             <img
                 src="https://wolf-wallpapers.pro/images/wolf-howling-at-the-moon-wallpapers-wallpaper-cave-98-1-wolf-wallpapers.pro.jpg"
                 alt="A white wolf howling at the moon"
@@ -25,38 +26,14 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload Emma Metcalfe. Hello World.
             </p>
-            <Container>
-                <Row>
-                    <div
-                        style={{
-                            width: 600,
-                            height: 200,
-                            backgroundColor: "red",
-                            border: "5px solid blue",
-                            padding: "50px"
-                        }}
-                    ></div>
-                    <Col>First column.</Col>
-
-                    <div
-                        style={{
-                            width: 600,
-                            height: 200,
-                            backgroundColor: "red",
-                            border: "5px solid blue",
-                            padding: "50px"
-                        }}
-                    ></div>
-                    <Col>
-                        Second column. You can put whatever you want in here,
-                        and it will be on the right side. Maybe try adding an
-                        image?
-                        <Button onClick={() => console.log("Hello World!")}>
-                            Log Hello World
-                        </Button>
-                    </Col>
-                </Row>
-            </Container>
+            <div style={{ backgroundColor: "blue", width: 1500, height: 200 }}>
+                <Container>
+                    <Row>
+                        <Col>Column 1</Col>
+                        <Col>Column 2</Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
