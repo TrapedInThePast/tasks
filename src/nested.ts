@@ -247,7 +247,28 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    if (targetOptionIndex === -1) {
+        const edited = questions.map(
+            (question: Question): Question =>
+                question.id === targetId
+                    ? { ...question, options: [...question.options, newOption] }
+                    : question
+        );
+        return edited;
+    } else {
+        const newQuestion = questions.findIndex(
+            (question: Question): boolean => question.id === targetId
+        );
+        const newArray = [...questions[newQuestion].options];
+        newArray.splice(targetOptionIndex, 1, newOption);
+        const edited = questions.map(
+            (question: Question): Question =>
+                question.id === targetId
+                    ? { ...question, options: newArray }
+                    : question
+        );
+        return edited;
+    }
 }
 
 /***
