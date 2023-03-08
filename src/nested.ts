@@ -220,7 +220,15 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType
 ): Question[] {
-    return [];
+    const changeQuestionType = questions.map(
+        (question: Question): Question =>
+            question.id === targetId
+                ? newQuestionType === "multiple_choice_question"
+                    ? { ...question, type: newQuestionType }
+                    : { ...question, type: newQuestionType, options: [] }
+                : question
+    );
+    return changeQuestionType;
 }
 
 /**
