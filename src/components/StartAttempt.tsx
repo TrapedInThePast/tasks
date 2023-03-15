@@ -14,6 +14,7 @@ export function StartAttempt(): JSX.Element {
             >
                 Start Quiz
             </Button>
+            <Button onClick={() => setProgress(false)}>Stop Quiz</Button>
         </span>
     );
 }
