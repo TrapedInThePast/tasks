@@ -15,6 +15,7 @@ export function StartAttempt(): JSX.Element {
                 Start Quiz
             </Button>
             <Button onClick={() => setProgress(false)}>Stop Quiz</Button>
+            <Button onClick={() => setAttempts(attempts + 1)}>Mulligan</Button>
         </span>
     );
 }
