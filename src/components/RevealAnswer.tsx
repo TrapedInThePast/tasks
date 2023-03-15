@@ -6,7 +6,7 @@ export function RevealAnswer(): JSX.Element {
     return (
         <span>
             <Button onClick={() => setVisible(!visible)}>Reveal Answer</Button>
-            to {visible}.
+            to {visible && <div>42</div>}.
         </span>
     );
 }
