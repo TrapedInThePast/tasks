@@ -4,8 +4,9 @@ import { Button } from "react-bootstrap";
 export function RevealAnswer(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(false);
     return (
-        <div>
-            <Button>Reveal Answer</Button>
-        </div>
+        <span>
+            <Button onClick={() => setVisible(!visible)}>Reveal Answer</Button>
+            to {visible}.
+        </span>
     );
 }
