@@ -11,11 +11,18 @@ export function StartAttempt(): JSX.Element {
                     setProgress(true);
                     setAttempts(attempts - 1);
                 }}
+                disabled={progress === true || attempts === 0}
             >
                 Start Quiz
             </Button>
             <Button onClick={() => setProgress(false)}>Stop Quiz</Button>
-            <Button onClick={() => setAttempts(attempts + 1)}>Mulligan</Button>
+            <Button
+                onClick={() => setAttempts(attempts + 1)}
+                disabled={progress}
+            >
+                Mulligan
+            </Button>
+            current attempts: {attempts}.
         </span>
     );
 }
