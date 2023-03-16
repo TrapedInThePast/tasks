@@ -18,6 +18,7 @@ export function TwoDice(): JSX.Element {
         <div>
             <Button onClick={() => setDice1(d6())}>Roll Left</Button>
             <span data-testid="left-die">die one: {dice1}</span>
+            <Button onClick={() => setDice2(d6())}>Roll Right</Button>
         </div>
     );
 }
