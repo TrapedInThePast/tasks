@@ -3,9 +3,6 @@ import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): JSX.Element {
     type HolidayType = "🎁" | "☘️" | "🦃" | "🎃" | "💖";
-    interface Question {
-        type: HolidayType;
-    }
     const holidayYear: Record<HolidayType, HolidayType> = {
         "💖": "☘️",
         "☘️": "🎃",
