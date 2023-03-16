@@ -20,6 +20,10 @@ export function TwoDice(): JSX.Element {
             <span data-testid="left-die">die one: {dice1}</span>
             <Button onClick={() => setDice2(d6())}>Roll Right</Button>
             <span data-testid="right-die">die two: {dice2}</span>
+            {dice1 === 1 && dice2 === 1 ? "Sorry, You Lose \n" : ""}
+            {dice2 !== 1 && dice1 === dice2
+                ? "Congratulations, You Win \n"
+                : ""}
         </div>
     );
 }
