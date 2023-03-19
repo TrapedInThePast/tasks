@@ -34,7 +34,7 @@ export function EditMode(): JSX.Element {
                 )}
             </div>
             <div>
-                <Form.Group controlId="formAnswer">
+                <Form.Group controlId="formInputAnswer">
                     <div>
                         <Form.Check
                             type="switch"
